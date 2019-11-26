@@ -37,7 +37,7 @@ export class Tab1Page {
             if ( data.titulo.length === 0 ) {
               return;
             } else {
-              this.deseosService.crearLista(data);
+              this.deseosService.crearLista( data.titulo );
             }
           }
         }
