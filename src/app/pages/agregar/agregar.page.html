@@ -21,8 +21,8 @@
     <ion-label>Tareas por hacer</ion-label>
   </ion-list-header>
 
-  <ion-item *ngFor="let item of lista.items">
-    <ion-checkbox [(ngModel)]="item.completado" slot="start" color="danger"></ion-checkbox>
+  <ion-item class="animated fadeInDown" *ngFor="let item of lista.items">
+    <ion-checkbox (ionChange)="cambioCheck( item )" [(ngModel)]="item.completado" slot="start" color="danger"></ion-checkbox>
     <ion-label>{{ item.desc }}</ion-label>
   </ion-item>
 
