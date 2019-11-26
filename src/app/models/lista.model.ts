@@ -1,23 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ListaItemModule } from './lista-item.module';
+import { ListaItem } from './lista-item.model';
 
-
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
-})
-export class ListaModule { 
+export class Lista {
 
   id: number;
   titulo: string;
   creadaEn: Date;
   terminadaEn: Date;
   terminada: boolean;
-  items: ListaItemModule[];
+  items: ListaItem[];
 
   constructor( titulo: string ) {
     this.titulo = titulo;
@@ -27,7 +17,6 @@ export class ListaModule {
     this.items = [];
 
     this.id = new Date().getTime();
-
 
   }
 }

@@ -8,6 +8,6 @@ import { DeseosService } from 'src/app/services/deseos.service';
 })
 export class Tab1Page {
 
-  constructor( public deseosService: DeseosService ) {}
+  constructor( public deseosService: DeseosService ) { }
 
 }
