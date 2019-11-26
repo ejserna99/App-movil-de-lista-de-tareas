@@ -53,4 +53,8 @@ export class Tab1Page {
     this.presentAlert();
   }
 
+  abrirTarea( id: number ) {
+    this.router.navigateByUrl(`/tabs/tab1/agregar/${id}`);
+  }
+
 }
