@@ -24,4 +24,8 @@ export class ListasComponent implements OnInit {
     }
   }
 
+  borrar( id: number ) {
+    this.deseosService.borrarLista( id );
+  }
+
 }
