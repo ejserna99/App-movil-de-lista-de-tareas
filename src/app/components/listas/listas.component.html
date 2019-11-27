@@ -1,6 +1,10 @@
 <ion-list>
-  <ion-item-sliding *ngFor="let item of deseosService.listas" class="animated fadeInDown">
-      
+  <ion-item-sliding *ngFor="let item of deseosService.listas | filtroCompletado: !terminada" class="animated fadeInDown">
+    
+    <ion-item-options side="start">
+      <ion-item-option (click)="editar( item )" color="warning"><ion-icon slot="icon-only" name="create"></ion-icon></ion-item-option>
+    </ion-item-options>
+
     <ion-item detail>
       <ion-label (click)="abrirTarea( item.id )">{{ item.titulo }}</ion-label>
       <ion-note slot="end">{{ item.items.length }} items</ion-note>
