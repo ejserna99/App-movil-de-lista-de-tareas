@@ -7,12 +7,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item detail *ngFor="let item of deseosService.listas">
-      <ion-label (click)="abrirTarea( item.id )">{{ item.titulo }}</ion-label>
-      <ion-note slot="end">{{ item.items.length }} items</ion-note>
-    </ion-item>
-  </ion-list>
+
+  <app-listas [terminada]="falso"></app-listas>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="agregarLista()" color="danger">
