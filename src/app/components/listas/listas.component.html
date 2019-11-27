@@ -1,4 +1,4 @@
-<ion-list>
+<ion-list #list>
   <ion-item-sliding *ngFor="let item of deseosService.listas | filtroCompletado: !terminada" class="animated fadeInDown">
     
     <ion-item-options side="start">

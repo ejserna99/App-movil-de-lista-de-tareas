@@ -40,4 +40,10 @@ export class DeseosService {
     this.listas = this.listas.filter( listaData => listaData.id !== id );
     this.guardarStorage();
   }
+
+  editarTitulo( lista: Lista, titulo: string ) {
+    const listaEdit = this.listas.filter( listaData => listaData.id === lista.id );
+    listaEdit[0].titulo = titulo;
+    this.guardarStorage();
+  }
 }
